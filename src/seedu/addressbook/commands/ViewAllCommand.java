@@ -3,7 +3,6 @@ package seedu.addressbook.commands;
 import seedu.addressbook.common.Messages;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 
-
 /**
  * Shows all details of the person identified using the last displayed index.
  * Private contact details are shown.

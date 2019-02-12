@@ -4,7 +4,6 @@ import seedu.addressbook.common.Messages;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.data.person.UniquePersonList.PersonNotFoundException;
 
-
 /**
  * Deletes a person identified using it's last displayed index from the address book.
  */
