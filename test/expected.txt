@@ -29,8 +29,6 @@
 || Example: help
 || exit: Exits the program.
 || Example: exit
-|| sort: Sorts all persons in the address book as a list with index numbers.
-|| Example: sort
 || ===================================================
 || Enter command: || [Command entered:  delete 1]
 || The person index provided is invalid
@@ -86,27 +84,6 @@
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name p/12345 e/valid@e.mail a/valid, address t/invalid_-[.tag]
 || Tags names should be alphanumeric
-|| ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/invalid@ a/111, valid place t/valid]
-|| Person emails should be 2 alphanumeric/period strings separated by '@'
-|| ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/invalid.e.mail a/111, valid place t/valid]
-|| Person emails should be 2 alphanumeric/period strings separated by '@'
-|| ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/invalid@e.     a/111, valid place t/valid]
-|| Person emails should be 2 alphanumeric/period strings separated by '@'
-|| ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/invalid@ .mail a/111, valid place t/valid]
-|| Person emails should be 2 alphanumeric/period strings separated by '@'
-|| ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/invalid@@e.mail a/111, valid place t/valid]
-|| Person emails should be 2 alphanumeric/period strings separated by '@'
-|| ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/invalid@e..... a/111, valid place t/valid]
-|| Person emails should be 2 alphanumeric/period strings separated by '@'
-|| ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/invalid@e.1234 a/111, valid place t/valid]
-|| Person emails should be 2 alphanumeric/period strings separated by '@'
 || ===================================================
 || Enter command: || [Command entered:  add Adam Brown p/111111 e/adam@gmail.com a/111, alpha street]
 || New person added: Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
