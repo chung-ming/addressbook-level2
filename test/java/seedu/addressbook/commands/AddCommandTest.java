@@ -97,18 +97,19 @@ public class AddCommandTest {
 
     @Test
     public void addCommand_validData_correctlyConstructed() throws Exception {
-        AddCommand command = new AddCommand(Name.EXAMPLE, Phone.EXAMPLE, Phone.IS_PRIVATE_EXAMPLE, Email.EXAMPLE,
-                Email.IS_PRIVATE_EXAMPLE, Address.EXAMPLE, Address.IS_PRIVATE_EXAMPLE, EMPTY_STRING_SET);
+        AddCommand command = new AddCommand(Name.EXAMPLE, Phone.EXAMPLE, true, Email.EXAMPLE, false,
+                Address.EXAMPLE, true, EMPTY_STRING_SET);
         ReadOnlyPerson p = command.getPerson();
 
-        // TODO: add comparison of tags to person.equals
+        // TODO: add comparison of tags to person.equals and equality methods to
+        // individual fields that compare privacy to simplify this
         assertEquals(Name.EXAMPLE, p.getName().fullName);
         assertEquals(Phone.EXAMPLE, p.getPhone().value);
-        assertEquals(Phone.IS_PRIVATE_EXAMPLE, p.getPhone().isPrivate());
+        assertTrue(p.getPhone().isPrivate());
         assertEquals(Email.EXAMPLE, p.getEmail().value);
-        assertEquals(Email.IS_PRIVATE_EXAMPLE, p.getEmail().isPrivate());
+        assertFalse(p.getEmail().isPrivate());
         assertEquals(Address.EXAMPLE, p.getAddress().value);
-        assertEquals(Address.IS_PRIVATE_EXAMPLE, p.getAddress().isPrivate());
+        assertTrue(p.getAddress().isPrivate());
         boolean isTagListEmpty = !p.getTags().iterator().hasNext();
         assertTrue(isTagListEmpty);
     }

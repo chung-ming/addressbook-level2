@@ -9,7 +9,6 @@ import seedu.addressbook.data.exception.IllegalValueException;
 public class Phone {
 
     public static final String EXAMPLE = "123456789";
-    public static final boolean IS_PRIVATE_EXAMPLE = true;
     public static final String MESSAGE_PHONE_CONSTRAINTS = "Person phone numbers should only contain numbers";
     public static final String PHONE_VALIDATION_REGEX = "\\d+";
 
